@@ -1,37 +1,133 @@
-import styles from "./Hero.module.css";
+import {
+  ArrowRight,
+  BarChart3,
+  Boxes,
+  CheckCircle2,
+  ChevronDown,
+  Code2,
+  GraduationCap,
+  Mail,
+  Plane,
+  Rocket,
+} from "lucide-react";
+
+import { FaGithub } from "react-icons/fa";
+import Reveal from "@/components/ui/Reveal/Reveal";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.content}>
-        <p className={styles.eyebrow}>Software Engineering</p>
+    <section id="top" className="hero-section">
+      <div className="hero-background" />
 
-        <h1 className={styles.title}>
-          Hi, I&apos;m Benjamín Ragnarsson.
-        </h1>
+      <div className="hero-grid">
+        <Reveal>
+          <div className="availability">
+            <span className="availability-dot" />
+            Available for work
+          </div>
 
-        <p className={styles.description}>
-          Software Engineering BSc candidate based in Reykjavík, Iceland.
-          I build backend and full-stack applications using technologies
-          including .NET, TypeScript, Python, REST APIs, Docker and
-          microservices.
-        </p>
+          <h1 className="hero-title">Benjamín Ragnarsson</h1>
 
-        <div className={styles.actions}>
-          <a href="#projects" className={styles.primaryButton}>
-            View my projects
-          </a>
+          <p className="hero-subtitle">
+            Software Engineer · BSc requirements completed
+          </p>
 
-          <a
-            href="https://github.com/Benjarag"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondaryButton}
-          >
-            GitHub
-          </a>
-        </div>
+          <div className="status-line">
+            <CheckCircle2 size={18} />
+            <span>All coursework completed and ready to contribute.</span>
+          </div>
+
+          <p className="hero-copy">
+            Based in Reykjavík, Iceland. I build reliable backend systems,
+            APIs and full-stack applications with a focus on clean code,
+            maintainability and real-world impact.
+          </p>
+
+          <div className="hero-actions">
+            <a href="#projects" className="button button-primary">
+              View Projects
+              <ArrowRight size={18} />
+            </a>
+
+            <a
+              href="https://github.com/Benjarag"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button button-secondary"
+            >
+              <FaGithub size={18} />
+              GitHub
+            </a>
+
+            <a
+              href="mailto:benjarag7@outlook.com"
+              className="button button-secondary"
+            >
+              <Mail size={18} />
+              Contact Me
+            </a>
+          </div>
+
+          <div className="hero-chips">
+            <div>
+              <Code2 size={17} />
+              Clean Code
+            </div>
+
+            <div>
+              <Boxes size={17} />
+              Scalable Systems
+            </div>
+
+            <div>
+              <Rocket size={17} />
+              Real-world Impact
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="academic-cards" delay={0.15}>
+          <div className="academic-card">
+            <div className="academic-icon">
+              <GraduationCap size={25} />
+            </div>
+
+            <div>
+              <strong>Reykjavík University</strong>
+              <span>BSc requirements completed</span>
+            </div>
+
+            <span className="completed">Completed</span>
+          </div>
+
+          <div className="academic-card">
+            <div className="academic-icon">
+              <BarChart3 size={25} />
+            </div>
+
+            <div>
+              <strong>GPA 8.8 / 10</strong>
+              <span>Strong academic performance</span>
+            </div>
+          </div>
+
+          <div className="academic-card">
+            <div className="academic-icon">
+              <Plane size={25} />
+            </div>
+
+            <div>
+              <strong>QUT Exchange, Brisbane</strong>
+              <span>Exchange semester in Australia</span>
+            </div>
+          </div>
+        </Reveal>
       </div>
+
+      <a href="#projects" className="scroll-cue">
+        <span>Scroll to explore</span>
+        <ChevronDown size={20} />
+      </a>
     </section>
   );
 }
