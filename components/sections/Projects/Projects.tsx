@@ -10,7 +10,7 @@ export default function Projects() {
           <div className="section-heading">
             <span className="section-line" />
             <div>
-              <span className="section-label">Selected work</span>
+              <span className="section-label">Finished work</span>
               <h2>Featured Projects</h2>
             </div>
           </div>

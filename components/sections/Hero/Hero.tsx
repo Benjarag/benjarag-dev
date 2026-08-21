@@ -1,14 +1,11 @@
 import {
   ArrowRight,
   BarChart3,
-  Boxes,
   CheckCircle2,
   ChevronDown,
-  Code2,
   GraduationCap,
   Mail,
   Plane,
-  Rocket,
 } from "lucide-react";
 
 import { FaGithub } from "react-icons/fa";
@@ -21,16 +18,16 @@ export default function Hero() {
 
       <div className="hero-grid">
         <Reveal>
-          <div className="availability">
-            <span className="availability-dot" />
-            Available for work
-          </div>
-
           <h1 className="hero-title">Benjamín Ragnarsson</h1>
 
           <p className="hero-subtitle">
             Software Engineer · BSc requirements completed
           </p>
+
+          <div className="availability">
+            <span className="availability-dot" />
+            Available for work
+          </div>
 
           <div className="status-line">
             <CheckCircle2 size={18} />
@@ -68,22 +65,6 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hero-chips">
-            <div>
-              <Code2 size={17} />
-              Clean Code
-            </div>
-
-            <div>
-              <Boxes size={17} />
-              Scalable Systems
-            </div>
-
-            <div>
-              <Rocket size={17} />
-              Real-world Impact
-            </div>
-          </div>
         </Reveal>
 
         <Reveal className="academic-cards" delay={0.15}>
