@@ -1,11 +1,21 @@
-import type { Project } from "@/types/project";
+import type { Project, ProjectSlug } from "@/types/project";
 
-export const projects: Project[] = [
+export const projects = [
   {
-    title: "Einkaklúbburinn endurhugsaður — Arion banki",
-    description:
-      "Backend solution for a new benefits system developed as my BSc final project.",
+    slug: "einkaklubburinn-arion-banki",
+    year: 2026,
     technologies: [
+      "C# / .NET",
+      "ASP.NET Core",
+      "REST API",
+      "Entity Framework Core",
+      "SQL Server",
+      "RabbitMQ",
+      "NServiceBus",
+      "Docker",
+      "Azure DevOps",
+    ],
+    cardTechnologies: [
       "C# / .NET",
       "ASP.NET Core",
       "SQL Server",
@@ -17,32 +27,40 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Dr. Cinema",
-    description:
-      "Mobile app for browsing movies, showtimes, trailers and ticket information.",
-    technologies: ["TypeScript", "React Native", "Expo", "REST API"],
+    slug: "dr-cinema",
+    year: 2025,
+    technologies: ["TypeScript", "React Native", "Expo", "REST API", "CSS"],
     icon: "cinema",
   },
   {
-    title: "Cryptocop",
-    description:
-      "Event-driven microservice ordering system for cryptocurrency purchases.",
+    slug: "cryptocop",
+    year: 2025,
     technologies: [".NET", "PostgreSQL", "RabbitMQ", "JWT"],
     icon: "shield",
   },
   {
-    title: "Fasteignavefur",
-    description:
-      "Full-stack real-estate platform with separate flows for buyers and sellers.",
+    slug: "fasteignavefur",
+    year: 2025,
     technologies: ["Python", "Django", "PostgreSQL", "REST API"],
     icon: "house",
   },
   {
-    title: "E-Commerce Microservices Platform",
-    description:
-      "Containerized e-commerce platform built around backend microservices.",
+    slug: "e-commerce-microservices",
+    year: 2025,
     technologies: [
-      ".NET",
+      "C# / .NET",
+      "REST API",
+      "API Gateway",
+      "PostgreSQL",
+      "Entity Framework Core",
+      "Next.js",
+      "Auth0",
+      "JWT",
+      "M2M Authentication",
+      "Docker",
+    ],
+    cardTechnologies: [
+      "C# / .NET",
       "API Gateway",
       "PostgreSQL",
       "Next.js",
@@ -51,4 +69,8 @@ export const projects: Project[] = [
     ],
     icon: "boxes",
   },
-];
+] satisfies readonly Project[];
+
+export function getProject(slug: ProjectSlug): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}

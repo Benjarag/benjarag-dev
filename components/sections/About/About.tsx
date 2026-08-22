@@ -2,8 +2,14 @@ import { GraduationCap, MapPin } from "lucide-react";
 
 import Reveal from "@/components/ui/Reveal/Reveal";
 import Skills from "@/components/sections/Skills/Skills";
+import type { Dictionary } from "@/i18n/types";
 
-export default function About() {
+type AboutProps = {
+  content: Dictionary["about"];
+  skillsContent: Dictionary["skills"];
+};
+
+export default function About({ content, skillsContent }: AboutProps) {
   return (
     <section id="about" className="page-section about-section">
       <div className="section-inner">
@@ -14,46 +20,31 @@ export default function About() {
                 <span className="section-line section-line-green" />
 
                 <div>
-                  <span className="section-label">A little context</span>
-                  <h2>About Me</h2>
+                  <span className="section-label">{content.eyebrow}</span>
+                  <h2>{content.title}</h2>
                 </div>
               </div>
 
-              <p>
-                I have completed all requirements for my BSc in Software
-                Engineering at Reykjavík University, with formal graduation
-                scheduled for October 2026.
-              </p>
-
-              <p>
-                During my studies I also completed an exchange semester at
-                Queensland University of Technology in Brisbane, with a focus
-                on areas including cybersecurity and secure software
-                development.
-              </p>
-
-              <p>
-                I enjoy building backend systems and full-stack applications,
-                learning new technologies and solving problems with software
-                that is clear, maintainable and useful.
-              </p>
+              {content.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
 
               <div className="about-facts">
                 <div>
                   <MapPin size={18} />
-                  Reykjavík, Iceland
+                  {content.location}
                 </div>
 
                 <div>
                   <GraduationCap size={18} />
-                  BSc requirements completed
+                  {content.education}
                 </div>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.12}>
-            <Skills />
+            <Skills content={skillsContent} />
           </Reveal>
         </div>
       </div>

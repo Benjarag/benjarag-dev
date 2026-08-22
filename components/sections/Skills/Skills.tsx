@@ -1,13 +1,18 @@
 import { Code2 } from "lucide-react";
 
 import { skills } from "@/data/skills";
+import type { Dictionary } from "@/i18n/types";
 
-export default function Skills() {
+type SkillsProps = {
+  content: Dictionary["skills"];
+};
+
+export default function Skills({ content }: SkillsProps) {
   return (
     <div id="skills" className="skills-card">
       <div className="card-heading">
         <Code2 size={22} />
-        <h3>Skills / Tech Stack</h3>
+        <h3>{content.title}</h3>
       </div>
 
       <div className="skills-grid">

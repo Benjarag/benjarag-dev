@@ -1,0 +1,47 @@
+.switcher {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+}
+
+.option {
+  display: contents;
+}
+
+.link {
+  border-radius: 4px;
+
+  color: var(--muted);
+
+  transition: color 180ms ease;
+}
+
+.link:hover {
+  color: white;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 4px;
+}
+
+.active {
+  color: var(--blue-light);
+  font-weight: 700;
+}
+
+.divider {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

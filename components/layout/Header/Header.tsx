@@ -1,27 +1,36 @@
-export default function Header() {
+import Link from "next/link";
+
+import LanguageToggle from "@/components/ui/LanguageToggle/LanguageToggle";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/types";
+
+type HeaderProps = {
+  locale: Locale;
+  content: Dictionary["header"];
+};
+
+export default function Header({ locale, content }: HeaderProps) {
+  const homeHref = `/${locale}`;
+
   return (
     <header className="site-header">
       <div className="nav-inner">
-        <a href="#top" className="brand">
+        <Link href={`${homeHref}#top`} className="brand">
           benjarag.dev
-        </a>
+        </Link>
 
-        <nav className="nav-links" aria-label="Primary navigation">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+        <nav className="nav-links" aria-label={content.navigationLabel}>
+          <Link href={`${homeHref}#projects`}>{content.projects}</Link>
+          <Link href={`${homeHref}#about`}>{content.about}</Link>
+          <Link href={`${homeHref}#skills`}>{content.skills}</Link>
+          <Link href={`${homeHref}#contact`}>{content.contact}</Link>
 
           <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            CV
+            {content.cv}
           </a>
         </nav>
 
-        <div className="language-switch" aria-label="Language">
-          <span>IS</span>
-          <span className="language-divider">/</span>
-          <strong>EN</strong>
-        </div>
+        <LanguageToggle locale={locale} label={content.languageLabel} />
       </div>
     </header>
   );
