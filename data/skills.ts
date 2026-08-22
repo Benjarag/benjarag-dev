@@ -1,4 +1,4 @@
-export const skills = [
+export const technicalSkills = [
   "C#",
   "C++",
   ".NET",
@@ -21,7 +21,23 @@ export const skills = [
   "Docker",
   "PostgreSQL",
   "SQL Server",
+  "Azure DevOps",
+] as const;
+
+export const engineeringTools = [
+  "Clean Architecture",
+  "SOLID",
+  "KISS",
+  "DRY",
+  "SRP",
+  "Event-Driven Architecture",
+  "Unit Testing",
+  "Integration Testing",
+  "Mocking",
   "Git",
   "GitHub",
-  "Azure DevOps",
-];
+  "Postman",
+  "OpenAPI / Swagger",
+  "Linux",
+  "PowerShell",
+] as const;

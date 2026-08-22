@@ -117,7 +117,8 @@ export const en = {
     education: "BSc requirements completed",
   },
   skills: {
-    title: "Skills / Tech Stack",
+    technologyTitle: "Skills / Tech Stack",
+    engineeringTitle: "Engineering / Tools",
   },
   contact: {
     eyebrow: "What's next?",

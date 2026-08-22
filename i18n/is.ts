@@ -117,7 +117,8 @@ export const is = {
     education: "Námskröfum til BSc-gráðu lokið",
   },
   skills: {
-    title: "Færni / Tæknistakkur",
+    technologyTitle: "Færni / Tæknistakkur",
+    engineeringTitle: "Aðferðir / Verkfæri",
   },
   contact: {
     eyebrow: "Hvað er næst?",

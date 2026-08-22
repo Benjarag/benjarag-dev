@@ -67,7 +67,8 @@ export type Dictionary = {
     education: string;
   };
   skills: {
-    title: string;
+    technologyTitle: string;
+    engineeringTitle: string;
   };
   contact: {
     eyebrow: string;

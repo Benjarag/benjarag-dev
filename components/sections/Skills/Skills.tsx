@@ -1,6 +1,7 @@
-import { Code2 } from "lucide-react";
+import { Code2, Wrench } from "lucide-react";
 
-import { skills } from "@/data/skills";
+import SkillCard from "@/components/sections/Skills/SkillCard";
+import { engineeringTools, technicalSkills } from "@/data/skills";
 import type { Dictionary } from "@/i18n/types";
 
 type SkillsProps = {
@@ -9,19 +10,17 @@ type SkillsProps = {
 
 export default function Skills({ content }: SkillsProps) {
   return (
-    <div id="skills" className="skills-card">
-      <div className="card-heading">
-        <Code2 size={22} />
-        <h3>{content.title}</h3>
-      </div>
-
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <span key={skill} className="skill-pill">
-            {skill}
-          </span>
-        ))}
-      </div>
+    <div id="skills" className="skills-stack">
+      <SkillCard
+        title={content.technologyTitle}
+        items={technicalSkills}
+        icon={Code2}
+      />
+      <SkillCard
+        title={content.engineeringTitle}
+        items={engineeringTools}
+        icon={Wrench}
+      />
     </div>
   );
 }
