@@ -1,0 +1,173 @@
+.article {
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  min-height: 275px;
+
+  padding: 1.4rem;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11, 28, 42, 0.94),
+      rgba(6, 19, 29, 0.92)
+    );
+
+  color: inherit;
+
+  overflow: hidden;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(56, 135, 255, 0.12),
+      transparent 48%
+    );
+
+  transition: opacity 220ms ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-8px);
+
+  border-color: rgba(66, 147, 255, 0.45);
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.22),
+    0 0 30px rgba(43, 112, 199, 0.08);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 4px;
+}
+
+.card:hover::before,
+.card:focus-visible::before {
+  opacity: 1;
+}
+
+.featured {
+  border-color: rgba(56, 135, 255, 0.27);
+}
+
+.top,
+.card h3,
+.card p,
+.technologyList {
+  position: relative;
+  z-index: 2;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  background: rgba(36, 112, 190, 0.1);
+
+  color: var(--blue-light);
+}
+
+.iconGreen {
+  color: var(--green);
+
+  background: rgba(81, 214, 160, 0.07);
+}
+
+.arrow {
+  color: #6f8497;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.card:hover .arrow,
+.card:focus-visible .arrow {
+  color: var(--blue-light);
+
+  transform: translate(4px, -4px);
+}
+
+.card h3 {
+  margin: 1.25rem 0 0.7rem;
+
+  font-size: 1.17rem;
+  line-height: 1.35;
+}
+
+.card p {
+  margin: 0 0 1.4rem;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.technologyList {
+  margin-top: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.45rem;
+}
+
+.technologyList span {
+  padding: 0.43rem 0.62rem;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  background: rgba(5, 17, 27, 0.75);
+
+  color: #b7c6d2;
+
+  font-size: 0.72rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::before,
+  .arrow {
+    transition: none;
+  }
+}
