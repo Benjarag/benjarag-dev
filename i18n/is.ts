@@ -27,7 +27,7 @@ export const is = {
     github: "GitHub",
     linkedin: "LinkedIn",
     contact: "Hafa samband",
-    scroll: "Skrunaðu til að skoða",
+    scroll: "Kannaðu meira",
     education: {
       university: {
         title: "Háskólinn í Reykjavík",
