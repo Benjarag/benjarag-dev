@@ -32,7 +32,7 @@ export const en = {
       university: {
         title: "Reykjavík University",
         subtitle: "BSc requirements completed",
-        status: "Completed",
+        status: "Graduation October 2026",
       },
       gpa: {
         title: "GPA 8.8 / 10",
@@ -118,7 +118,7 @@ export const en = {
   },
   skills: {
     technologyTitle: "Skills / Tech Stack",
-    engineeringTitle: "Engineering / Tools",
+    engineeringTitle: "Tools / Best Practices",
   },
   contact: {
     eyebrow: "What's next?",

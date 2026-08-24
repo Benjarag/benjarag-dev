@@ -118,7 +118,7 @@ export const is = {
   },
   skills: {
     technologyTitle: "Færni / Tæknistakkur",
-    engineeringTitle: "Aðferðir / Verkfæri",
+    engineeringTitle: "Verkfæri / Vinnubrögð",
   },
   contact: {
     eyebrow: "Hvað er næst?",
