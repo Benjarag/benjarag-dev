@@ -2,6 +2,7 @@ import { ArrowLeft, CalendarDays } from "lucide-react";
 import Link from "next/link";
 
 import styles from "@/components/sections/ProjectDetails/ProjectDetails.module.css";
+import ProjectGallery from "@/components/sections/ProjectDetails/ProjectGallery";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary, ProjectCopy } from "@/i18n/types";
 import type { Project } from "@/types/project";
@@ -12,7 +13,16 @@ type ProjectDetailsProps = {
   content: ProjectCopy;
   labels: Pick<
     Dictionary["projects"],
-    "back" | "overview" | "technologies" | "year"
+    | "back"
+    | "overview"
+    | "gallery"
+    | "screenshot"
+    | "openScreenshot"
+    | "closeGallery"
+    | "previousScreenshot"
+    | "nextScreenshot"
+    | "technologies"
+    | "year"
   >;
 };
 
@@ -52,6 +62,18 @@ export default function ProjectDetails({
             <p key={paragraph}>{paragraph}</p>
           ))}
         </section>
+
+        {project.screenshots && project.screenshotLayout && (
+          <section className={`${styles.section} ${styles.gallerySection}`}>
+            <h2>{labels.gallery}</h2>
+            <ProjectGallery
+              screenshots={project.screenshots}
+              layout={project.screenshotLayout}
+              projectTitle={content.title}
+              labels={labels}
+            />
+          </section>
+        )}
 
         <section className={styles.section}>
           <h2>{labels.technologies}</h2>

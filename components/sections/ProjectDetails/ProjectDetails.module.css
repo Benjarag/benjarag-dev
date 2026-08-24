@@ -142,6 +142,10 @@
   margin-top: 1rem;
 }
 
+.gallerySection {
+  overflow: hidden;
+}
+
 .technologies {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +181,10 @@
   .meta {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .gallerySection {
+    padding-inline: 1rem;
   }
 }
 

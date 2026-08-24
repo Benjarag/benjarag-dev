@@ -50,6 +50,12 @@ export const en = {
     viewProject: "View project details",
     back: "Back to projects",
     overview: "Project overview",
+    gallery: "Interface gallery",
+    screenshot: "interface screenshot",
+    openScreenshot: "Open full-size screenshot",
+    closeGallery: "Close image viewer",
+    previousScreenshot: "Previous screenshot",
+    nextScreenshot: "Next screenshot",
     technologies: "Technologies",
     year: "Year",
     items: {
@@ -57,50 +63,55 @@ export const en = {
         title: "Einkaklúbburinn endurhugsaður — Arion banki",
         category: "BSc final project",
         summary:
-          "Backend solution for a new benefits system developed as my BSc final project.",
+          "A production-minded prototype for a data-driven benefits and discount platform, developed with Arion Bank.",
         details: [
-          "Developed the backend solution for a new benefits system for Arion Bank.",
-          "The solution used C# and .NET, ASP.NET Core REST APIs, Entity Framework Core with SQL Server, RabbitMQ and NServiceBus, Docker, and Azure DevOps.",
+          "In a five-person team, I helped deliver a technical prototype that reimagined Arion Bank's benefits platform. The system manages partners, merchants, terminals and discount rules, then evaluates customer transactions against conditions such as card type, loyalty status, location and offer priority.",
+          "The backend used ASP.NET Core REST APIs, Entity Framework Core and SQL Server with a clear separation between endpoints, business logic and data access. RabbitMQ and NServiceBus handled transaction events asynchronously, including duplicate protection, retries, error queues and outbound events for future refund and notification services. The prototype processed more than 100 transactions per minute in testing.",
+          "The team used Docker Compose, Azure DevOps pipelines and Octopus Deploy to keep development, testing and deployment repeatable. My main responsibility was project reporting and internal information flow: maintaining a shared view of scope and progress, compiling time and delivery data, and supporting collaboration from Brisbane across a large time-zone difference.",
         ],
       },
       "dr-cinema": {
         title: "Dr. Cinema",
         category: "Mobile application",
         summary:
-          "Mobile app for browsing movies, showtimes, trailers and ticket information.",
+          "A feature-rich cinema app with live listings, advanced filters, favorites, reviews and contextual showtimes.",
         details: [
-          "Built a mobile application that uses the Kvikmyndir.is API to present movie information, showtimes, trailers and ticket-purchase links.",
-          "Developed in TypeScript with React Native and Expo, with REST API integration and an emphasis on a clear user interface.",
+          "Built a React Native and Expo application around the authenticated Kvikmyndir.is REST API, including access-token handling, asynchronous requests, loading states and clear error feedback. Redux Toolkit slices keep movies, cinemas, filters, favorites and user reviews separated and predictable.",
+          "Users can browse by cinema, search and filter by ratings, cast, directors, age certificates and showtime ranges, then open detailed movie pages with trailers, ratings and ticket information. Dynamic Expo Router routes preserve cinema context, so a movie opened from a cinema immediately shows the relevant screenings while still allowing users to switch venue.",
+          "Favorites and reviews persist between sessions with AsyncStorage. Favorite lists can be reordered by drag and drop and shared through deep links that import or merge a list. The app also includes reusable components, light and dark themes, native sharing, full-screen posters, YouTube trailers and external map links.",
         ],
       },
       cryptocop: {
         title: "Cryptocop",
         category: "Web services final project",
         summary:
-          "Event-driven microservice ordering system for cryptocurrency purchases.",
+          "An event-driven ordering backend combining secure APIs, background workers and cryptocurrency market data.",
         details: [
-          "Developed a containerized .NET microservice ordering system for cryptocurrency purchases.",
-          "Used PostgreSQL, RabbitMQ and JWT, together with background services for payment confirmation and email.",
+          "Built an ASP.NET Core ordering platform where users can authenticate, browse cryptocurrencies and exchanges, manage carts, addresses and payment methods, place orders and review purchase history. A layered controller, service and repository structure separates business rules from Entity Framework Core data access in PostgreSQL.",
+          "JWT bearer authentication protects endpoints and supports claims and token revocation, while input and payment-card validation includes number checks and masking. Order creation publishes RabbitMQ events that independent .NET workers consume for card validation and SendGrid confirmation emails, keeping the API loosely coupled from background work.",
+          "The platform also adapts data from an external cryptocurrency API through HttpClient and exposes it through its own REST endpoints. Docker Compose runs the API, PostgreSQL, RabbitMQ and workers as separate services with persistent storage, health checks, service dependencies and environment-based configuration.",
         ],
       },
       fasteignavefur: {
         title: "Fasteignavefur",
         category: "Full-stack web project",
         summary:
-          "Full-stack real-estate platform with separate flows for buyers and sellers.",
+          "A role-based real-estate marketplace covering discovery, offers and the full purchase workflow.",
         details: [
-          "Developed a full-stack real-estate website with a feature-rich interface and different flows for buyers and sellers.",
-          "The project covered frontend and backend integration, database work and more complex user flows.",
+          "Built a Django marketplace with separate experiences for guests, buyers and sellers. The application is divided into focused apps for accounts, properties, sellers, offers and notifications, with Django ORM and PostgreSQL modelling listings, images, seller profiles, favorites and purchase offers.",
+          "Buyers can search, filter and sort by location, price, property type, size and listing date, inspect image-rich property pages and save favorites through asynchronous JavaScript requests. Sellers can review, accept, reject or update offers, with permissions and business rules preventing invalid actions after a sale or accepted offer.",
+          "A multi-step purchase flow collects contact details, validates the chosen payment method and updates related property and offer states consistently. The project also includes event email notifications and a responsive interface built with Django templates, Bootstrap, CSS and JavaScript, deployed using Azure.",
         ],
       },
       "e-commerce-microservices": {
         title: "E-Commerce Microservices Platform",
         category: "Full-stack and backend project",
         summary:
-          "Containerized e-commerce platform built around backend microservices.",
+          "A secured, containerized microservices platform for product catalog and order management.",
         details: [
-          "Developed a containerized e-commerce system with C# and .NET, REST APIs, an API Gateway, PostgreSQL, Entity Framework Core and Next.js.",
-          "Worked with Auth0, JWT, machine-to-machine authentication and Docker.",
+          "Designed separate ASP.NET Core Product Catalog and Order Management services behind an API Gateway. Each service follows a layered controller, service, repository and DTO structure, with Entity Framework Core migrations managing its PostgreSQL data.",
+          "Auth0 and JWT permission policies protect user-facing endpoints. For internal calls, the gateway uses OAuth client credentials to obtain machine-to-machine tokens. It also composes cross-service data by enriching order lines with current catalog names and prices and calculating a detailed order total.",
+          "A small Next.js and TypeScript frontend handles Auth0 login and access-token retrieval for protected API testing. Docker Compose packages the gateway, both APIs, frontend and PostgreSQL as isolated services on an internal network with persistent database storage.",
         ],
       },
     },

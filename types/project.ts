@@ -20,6 +20,8 @@ export type Project = {
   year: number;
   technologies: readonly string[];
   cardTechnologies?: readonly string[];
+  screenshots?: readonly string[];
+  screenshotLayout?: "phone" | "desktop";
   icon: ProjectIcon;
   featured?: boolean;
 };

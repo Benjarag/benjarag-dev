@@ -10,7 +10,7 @@ type SkillsProps = {
 
 export default function Skills({ content }: SkillsProps) {
   return (
-    <div id="skills" className="skills-stack">
+    <div className="skills-stack">
       <SkillCard
         title={content.technologyTitle}
         items={technicalSkills}

@@ -12,6 +12,7 @@ type AboutProps = {
 export default function About({ content, skillsContent }: AboutProps) {
   return (
     <section id="about" className="page-section about-section">
+      <span id="skills" className="section-anchor" aria-hidden="true" />
       <div className="section-inner">
         <div className="about-grid">
           <Reveal>

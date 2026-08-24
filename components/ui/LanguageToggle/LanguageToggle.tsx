@@ -51,6 +51,7 @@ export default function LanguageToggle({
               href={getLocalizedPath(pathname, option)}
               hrefLang={option}
               lang={option}
+              scroll={false}
             >
               {option.toUpperCase()}
             </Link>

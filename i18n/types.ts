@@ -4,7 +4,7 @@ export type ProjectCopy = {
   title: string;
   category: string;
   summary: string;
-  details: readonly [string, string];
+  details: readonly string[];
 };
 
 export type Dictionary = {
@@ -55,6 +55,12 @@ export type Dictionary = {
     viewProject: string;
     back: string;
     overview: string;
+    gallery: string;
+    screenshot: string;
+    openScreenshot: string;
+    closeGallery: string;
+    previousScreenshot: string;
+    nextScreenshot: string;
     technologies: string;
     year: string;
     items: Record<ProjectSlug, ProjectCopy>;
