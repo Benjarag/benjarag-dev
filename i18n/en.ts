@@ -5,7 +5,7 @@ export const en = {
     siteTitle: "Benjamín Ragnarsson | Software Engineer",
     titleTemplate: "%s | Benjamín Ragnarsson",
     description:
-      "Software engineer based in Reykjavík, building reliable backend systems, APIs and full-stack applications.",
+      "Personal portfolio of Benjamín Ragnarsson (Benjamin Ragnarsson), a software engineer based in Reykjavík, Iceland.",
   },
   header: {
     navigationLabel: "Primary navigation",
@@ -67,7 +67,8 @@ export const en = {
         details: [
           "In a five-person team, I helped deliver a technical prototype that reimagined Arion Bank's benefits platform. The system manages partners, merchants, terminals and discount rules, then evaluates customer transactions against conditions such as card type, loyalty status, location and offer priority.",
           "The backend used ASP.NET Core REST APIs, Entity Framework Core and SQL Server with a clear separation between endpoints, business logic and data access. RabbitMQ and NServiceBus handled transaction events asynchronously, including duplicate protection, retries, error queues and outbound events for future refund and notification services. The prototype processed more than 100 transactions per minute in testing.",
-          "The team used Docker Compose, Azure DevOps pipelines and Octopus Deploy to keep development, testing and deployment repeatable. My main responsibility was project reporting and internal information flow: maintaining a shared view of scope and progress, compiling time and delivery data, and supporting collaboration from Brisbane across a large time-zone difference.",
+          "The team used Docker Compose, Azure DevOps Pipelines and Octopus Deploy to coordinate development, testing and deployment. I took primary responsibility for project reporting and internal communication, maintained oversight of its scope and status, and compiled work and progress data for the team. I also focused on keeping collaboration efficient and information flow clear while working from Brisbane across a significant time-zone difference.",
+          "Project report: https://hdl.handle.net/1946/53852",
         ],
       },
       "dr-cinema": {
@@ -76,9 +77,9 @@ export const en = {
         summary:
           "A feature-rich cinema app with live listings, advanced filters, favorites, reviews and contextual showtimes.",
         details: [
-          "Built a React Native and Expo application around the authenticated Kvikmyndir.is REST API, including access-token handling, asynchronous requests, loading states and clear error feedback. Redux Toolkit slices keep movies, cinemas, filters, favorites and user reviews separated and predictable.",
-          "Users can browse by cinema, search and filter by ratings, cast, directors, age certificates and showtime ranges, then open detailed movie pages with trailers, ratings and ticket information. Dynamic Expo Router routes preserve cinema context, so a movie opened from a cinema immediately shows the relevant screenings while still allowing users to switch venue.",
-          "Favorites and reviews persist between sessions with AsyncStorage. Favorite lists can be reordered by drag and drop and shared through deep links that import or merge a list. The app also includes reusable components, light and dark themes, native sharing, full-screen posters, YouTube trailers and external map links.",
+          "Built a React Native and Expo application around the authenticated Kvikmyndir.is REST API. The app handles access tokens, makes asynchronous requests and shows clear feedback while loading or when errors occur. Redux Toolkit keeps state for movies, cinemas, filters, favorites and user reviews separate and predictable.",
+          "Users can browse by cinema, search and filter by ratings, cast, directors, age certificates and showtime ranges, then open detailed movie pages with trailers, ratings and ticket information. Dynamic Expo Router routes retain the selected cinema and ensure the correct showtimes appear when navigating between screens.",
+          "Favorites and reviews persist between sessions with AsyncStorage. Favorite lists can be reordered by drag and drop and shared with others. The app also includes reusable components, light and dark themes, native sharing, full-screen posters, YouTube trailers and external map links.",
         ],
       },
       cryptocop: {
@@ -96,18 +97,18 @@ export const en = {
         title: "Fasteignavefur",
         category: "Full-stack web project",
         summary:
-          "A role-based real-estate marketplace covering discovery, offers and the full purchase workflow.",
+          "A role-based real estate marketplace covering property discovery, offers and the complete purchase process.",
         details: [
-          "Built a Django marketplace with separate experiences for guests, buyers and sellers. The application is divided into focused apps for accounts, properties, sellers, offers and notifications, with Django ORM and PostgreSQL modelling listings, images, seller profiles, favorites and purchase offers.",
-          "Buyers can search, filter and sort by location, price, property type, size and listing date, inspect image-rich property pages and save favorites through asynchronous JavaScript requests. Sellers can review, accept, reject or update offers, with permissions and business rules preventing invalid actions after a sale or accepted offer.",
-          "A multi-step purchase flow collects contact details, validates the chosen payment method and updates related property and offer states consistently. The project also includes event email notifications and a responsive interface built with Django templates, Bootstrap, CSS and JavaScript, deployed using Azure.",
+          "Built a Django real estate marketplace with different functionality for guests, buyers and sellers. The project is split into Django apps for accounts, properties, sellers, offers and notifications, using Django ORM and PostgreSQL to manage listings, images, seller profiles, favorites and purchase offers.",
+          "Buyers can search, filter and sort properties by location, price, property type, size and listing date. They can view property details and images, save favorites and submit offers. Sellers can review, accept, reject or update offers, while permissions and business rules prevent invalid actions once an offer has been accepted or a property has been sold.",
+          "The purchase process is split into multiple steps for collecting contact details, validating the payment method and updating the related property and offer statuses. The project also includes email notifications and a responsive interface built with Django templates, Bootstrap, CSS and JavaScript, deployed on Azure.",
         ],
       },
       "e-commerce-microservices": {
         title: "E-Commerce Microservices Platform",
         category: "Full-stack and backend project",
         summary:
-          "A secured, containerized microservices platform for product catalog and order management.",
+          "A secure two-service microservices platform for product catalog and order management, running in Docker.",
         details: [
           "Designed separate ASP.NET Core Product Catalog and Order Management services behind an API Gateway. Each service follows a layered controller, service, repository and DTO structure, with Entity Framework Core migrations managing its PostgreSQL data.",
           "Auth0 and JWT permission policies protect user-facing endpoints. For internal calls, the gateway uses OAuth client credentials to obtain machine-to-machine tokens. It also composes cross-service data by enriching order lines with current catalog names and prices and calculating a detailed order total.",

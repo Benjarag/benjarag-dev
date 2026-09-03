@@ -5,7 +5,7 @@ export const is = {
     siteTitle: "Benjamín Ragnarsson | Hugbúnaðarverkfræðingur",
     titleTemplate: "%s | Benjamín Ragnarsson",
     description:
-      "Hugbúnaðarverkfræðingur í Reykjavík sem þróar áreiðanleg bakendakerfi, API og heildarlausnir.",
+      "Persónulegt verkasafn Benjamíns Ragnarssonar (Benjamin Ragnarsson), hugbúnaðarverkfræðings í Reykjavík á Íslandi.",
   },
   header: {
     navigationLabel: "Aðalvalmynd",
@@ -67,7 +67,8 @@ export const is = {
         details: [
           "Ég vann í fimm manna teymi að tæknilegri frumgerð sem endurhugsaði fríðindakerfi Arion banka. Kerfið heldur utan um samstarfsaðila, söluaðila, posa og afsláttarreglur og metur færslur út frá meðal annars kortategund, fríðindastöðu, búsetu og forgangi tilboða.",
           "Bakendinn var byggður með ASP.NET Core REST API, Entity Framework Core og SQL Server og skýrum aðskilnaði endapunkta, viðskiptareglna og gagnalags. RabbitMQ og NServiceBus sáu um ósamstillta færsluvinnslu með vörn gegn tvívinnslu, endurtilraunum, villuröðum og niðurstöðuskeytum fyrir framtíðar endurgreiðslu- og tilkynningaþjónustur. Frumgerðin vann úr yfir 100 færslum á mínútu í prófunum.",
-          "Teymið nýtti Docker Compose, Azure DevOps Pipelines og Octopus Deploy til að samræma þróun, prófanir og dreifingu. Mín meginábyrgð var skýrslugerð og upplýsingamiðlun: að viðhalda sameiginlegri sýn á umfang og stöðu verkefnisins, taka saman vinnu- og framvindugögn og styðja samstarfið frá Brisbane þrátt fyrir mikinn tímamun.",
+          "Teymið nýtti Docker Compose, Azure DevOps Pipelines og Octopus Deploy til að samræma þróun, prófanir og dreifingu. Ég bar meginábyrgð á skýrslugerð og upplýsingamiðlun innan verkefnisins, hélt utan um umfang og stöðu þess og tók saman vinnu- og framvindugögn fyrir teymið. Ég lagði jafnframt áherslu á að halda samstarfinu skilvirku og upplýsingaflæði skýru þrátt fyrir að vinna frá Brisbane og takast á við verulegan tímamun.",
+          "Lokaskýrsla verkefnisins: https://hdl.handle.net/1946/53852",
         ],
       },
       "dr-cinema": {
@@ -76,9 +77,9 @@ export const is = {
         summary:
           "Kvikmyndaforrit með lifandi dagskrá, ítarlegum síum, uppáhaldslistum, umsögnum og sýningartímum.",
         details: [
-          "Þróaði React Native og Expo forrit sem nýtir aðgangsstýrt REST API frá Kvikmyndir.is, þar á meðal meðhöndlun aðgangslykils, ósamstilltar fyrirspurnir, hleðslustöður og skýr villuskilaboð. Redux Toolkit heldur aðskildu og fyrirsjáanlegu ástandi fyrir kvikmyndir, kvikmyndahús, síur, uppáhald og umsagnir.",
-          "Notendur geta skoðað kvikmyndir eftir kvikmyndahúsi og síað eftir einkunnum, leikurum, leikstjórum, aldurstakmörkum og sýningartímum. Kvikmyndasíður sýna stiklu, einkunnir og miðaupplýsingar. Breytilegar leiðir í Expo Router varðveita samhengi kvikmyndahússins svo réttir sýningartímar birtast strax, en samt er hægt að skipta um hús.",
-          "Uppáhaldslistar og umsagnir vistast á milli keyrslna með AsyncStorage. Raða má uppáhaldi með því að draga og sleppa og deila listum með djúptenglum sem flytja inn eða sameina lista. Forritið inniheldur einnig endurnýtanlega hluti, ljóst og dökkt þema, innbyggða deilingu, veggspjöld á öllum skjánum, YouTube-stiklur og kortatengla.",
+          "Þróaði React Native og Expo forrit sem nýtir aðgangsstýrt REST API frá Kvikmyndir.is. Forritið meðhöndlar aðgangslykil, sendir ósamstilltar fyrirspurnir og sýnir skýr skilaboð við hleðslu eða villur. Redux Toolkit heldur aðskildu og fyrirsjáanlegu ástandi fyrir kvikmyndir, kvikmyndahús, síur, uppáhald og umsagnir.",
+          "Notendur geta skoðað kvikmyndir eftir kvikmyndahúsi og síað eftir einkunnum, leikurum, leikstjórum, aldurstakmörkum og sýningartímum. Kvikmyndasíður sýna stiklu, einkunnir og miðaupplýsingar. Breytilegar leiðir í Expo Router halda utan um valið kvikmyndahús og tryggja að réttir sýningartímar birtist þegar farið er á milli skjáa.",
+          "Uppáhaldslistar og umsagnir vistast á milli keyrslna með AsyncStorage. Hægt er að raða uppáhaldslistum með því að draga og sleppa og deila þeim með öðrum. Forritið inniheldur einnig endurnýtanlega hluti, ljóst og dökkt þema, innbyggða deilingu, veggspjöld á öllum skjánum, YouTube-stiklur og kortatengla.",
         ],
       },
       cryptocop: {
@@ -96,22 +97,22 @@ export const is = {
         title: "Fasteignavefur",
         category: "Full-stack vefverkefni",
         summary:
-          "Hlutverkaskiptur fasteignamarkaður sem nær frá leit og tilboðum yfir í fullnaðarferli kaupa.",
+          "Fasteignamarkaður fyrir gesti, kaupendur og seljendur, frá leit og tilboðum yfir í kaupferlið.",
         details: [
-          "Þróaði Django-fasteignamarkað með mismunandi upplifun fyrir gesti, kaupendur og seljendur. Kerfinu er skipt í afmörkuð Django-forrit fyrir aðganga, eignir, seljendur, tilboð og tilkynningar. Django ORM og PostgreSQL halda utan um eignir, myndir, seljendasnið, uppáhald og kauptilboð.",
-          "Kaupendur geta leitað, síað og raðað eftir staðsetningu, verði, eignartegund, stærð og skráningardegi, skoðað myndríkar eignasíður og vistað uppáhald með ósamstilltum JavaScript-beiðnum. Seljendur geta samþykkt, hafnað eða uppfært tilboð og heimildir og viðskiptareglur koma í veg fyrir ógildar aðgerðir eftir sölu eða samþykkt tilboð.",
-          "Fjölskrefa kaupferli safnar tengiliðaupplýsingum, sannreynir greiðslumáta og uppfærir stöðu eignar og tengdra tilboða á samræmdan hátt. Verkefnið inniheldur einnig tölvupósttilkynningar og skjáaðlagað viðmót byggt með Django-sniðmátum, Bootstrap, CSS og JavaScript og var keyrt á Azure.",
+          "Þróaði fasteignavef í Django þar sem gestir, kaupendur og seljendur hafa mismunandi aðgang og virkni. Verkefninu er skipt í Django-forrit fyrir notendur, fasteignir, seljendur, tilboð og tilkynningar. Django ORM og PostgreSQL eru notuð til að halda utan um fasteignir, myndir, seljendasnið, uppáhald og kauptilboð.",
+          "Kaupendur geta leitað, síað og raðað fasteignum eftir staðsetningu, verði, eignartegund, stærð og skráningardegi. Hægt er að skoða upplýsingar og myndir, vista fasteignir í uppáhald og gera tilboð. Seljendur geta skoðað, samþykkt, hafnað eða uppfært tilboð og kerfið kemur í veg fyrir ógildar aðgerðir eftir að tilboð hefur verið samþykkt eða fasteign seld.",
+          "Kaupferlið er í nokkrum skrefum þar sem tengiliðaupplýsingum er safnað, greiðslumáti staðfestur og staða fasteignar og tilboða uppfærð. Verkefnið inniheldur einnig tölvupósttilkynningar og skjáaðlagað viðmót byggt með Django Templates, Bootstrap, CSS og JavaScript og var keyrt á Azure.",
         ],
       },
       "e-commerce-microservices": {
         title: "E-Commerce Microservices Platform",
         category: "Full-stack og bakendaverkefni",
         summary:
-          "Öruggur, Docker-keyrður örþjónustuvettvangur fyrir vörulista og pantanir.",
+          "Örugg microservices-lausn fyrir vörulista og pantanir, keyrð í Docker.",
         details: [
-          "Hannaði aðskildar ASP.NET Core-þjónustur fyrir vörulista og pantanir á bak við API Gateway. Hver þjónusta fylgir lagskiptri uppbyggingu með stýringum, þjónustum, gagnageymslum og DTO-líkönum, en gagnagrunnsuppfærslur Entity Framework Core halda utan um breytingar á PostgreSQL-gögnum.",
-          "Auth0 og JWT-heimildareglur vernda endapunkta notenda. Fyrir innri samskipti notar gáttin OAuth client credentials til að sækja aðgangslykil fyrir samskipti milli þjónusta. Hún sameinar einnig gögn milli þjónusta með því að auðga pöntunarlínur með núverandi heiti og verði úr vörulista og reikna heildarverð pöntunar.",
-          "Lítill Next.js- og TypeScript-framendi sér um Auth0-innskráningu og sækir aðgangslykil til að prófa verndaða API-endapunkta. Docker Compose pakkar gáttinni, báðum API-þjónustum, framenda og PostgreSQL í aðskildar þjónustur á innra neti með varanlegri gagnageymslu.",
+          "Þróaði tvær ASP.NET Core-þjónustur, aðra fyrir vörulista og hina fyrir pantanir, sem tengjast í gegnum API Gateway. Hvor þjónusta fylgir lagskiptri uppbyggingu með controller, service, repository og DTO, en Entity Framework Core sér um breytingar á PostgreSQL-gagnagrunninum.",
+          "Auth0 og JWT-heimildir vernda API-endapunkta fyrir notendur. Fyrir samskipti milli þjónustanna notar API Gateway OAuth client credentials til að sækja machine-to-machine token. API Gateway sækir einnig gögn úr báðum þjónustum, bætir núverandi vöruheitum og verði við pöntunarlínur og reiknar út heildarverð pöntunar.",
+          "Next.js- og TypeScript-framendi sér um Auth0-innskráningu og sækir access token til að prófa verndaða API-endapunkta. Docker Compose keyrir API Gateway, bæði API-in, framendann og PostgreSQL sem sjálfstæðar þjónustur á innra neti með varanlegri gagnageymslu.",
         ],
       },
     },

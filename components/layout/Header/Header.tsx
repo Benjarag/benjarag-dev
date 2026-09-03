@@ -15,6 +15,26 @@ export default function Header({ locale, content }: HeaderProps) {
   return (
     <header className="site-header">
       <div className="nav-inner">
+        <details className="mobile-menu">
+          <summary aria-label={content.navigationLabel}>
+            <span className="hamburger-icon" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+          </summary>
+
+          <nav className="mobile-menu-links" aria-label={content.navigationLabel}>
+            <Link href={`${homeHref}#projects`}>{content.projects}</Link>
+            <Link href={`${homeHref}#about`}>{content.about}</Link>
+            <Link href={`${homeHref}#skills`}>{content.skills}</Link>
+            <Link href={`${homeHref}#contact`}>{content.contact}</Link>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              {content.cv}
+            </a>
+          </nav>
+        </details>
+
         <Link href={`${homeHref}#top`} className="brand">
           benjarag.dev
         </Link>

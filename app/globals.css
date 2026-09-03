@@ -136,6 +136,10 @@ a {
   transform-origin: left;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 /* GENERAL SECTIONS */
 
 .page-section {
@@ -895,11 +899,94 @@ a {
 
 @media (max-width: 760px) {
   .nav-inner {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .hamburger-icon {
+    width: 21px;
+
+    display: grid;
+    gap: 4px;
+  }
+
+  .hamburger-icon span {
+    width: 100%;
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #d8e1e9;
+
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .mobile-menu[open] .hamburger-icon span:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .mobile-menu[open] .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu[open] .hamburger-icon span:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .mobile-menu-links {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+
+    min-width: 180px;
+    padding: 0.45rem;
+
+    display: grid;
+    gap: 0.15rem;
+
+    border: 1px solid var(--border-bright);
+    border-radius: 10px;
+
+    background: rgba(5, 13, 21, 0.98);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+  }
+
+  .mobile-menu-links a {
+    padding: 0.8rem 0.9rem;
+
+    border-radius: 7px;
+
+    color: #d8e1e9;
+    font-size: 0.92rem;
+  }
+
+  .mobile-menu-links a:hover,
+  .mobile-menu-links a:focus-visible {
+    background: rgba(56, 135, 255, 0.12);
+    color: white;
   }
 
   .hero-title {
