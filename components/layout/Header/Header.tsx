@@ -11,6 +11,7 @@ type HeaderProps = {
 
 export default function Header({ locale, content }: HeaderProps) {
   const homeHref = `/${locale}`;
+  const cvHref = locale === "en" ? "/cvEn.pdf" : "/cv.pdf";
 
   return (
     <header className="site-header">
@@ -29,7 +30,7 @@ export default function Header({ locale, content }: HeaderProps) {
             <Link href={`${homeHref}#about`}>{content.about}</Link>
             <Link href={`${homeHref}#skills`}>{content.skills}</Link>
             <Link href={`${homeHref}#contact`}>{content.contact}</Link>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={cvHref} target="_blank" rel="noopener noreferrer">
               {content.cv}
             </a>
           </nav>
@@ -45,7 +46,7 @@ export default function Header({ locale, content }: HeaderProps) {
           <Link href={`${homeHref}#skills`}>{content.skills}</Link>
           <Link href={`${homeHref}#contact`}>{content.contact}</Link>
 
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={cvHref} target="_blank" rel="noopener noreferrer">
             {content.cv}
           </a>
         </nav>
