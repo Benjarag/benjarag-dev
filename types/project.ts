@@ -1,5 +1,6 @@
 export type ProjectIcon =
   | "landmark"
+  | "wrench"
   | "cinema"
   | "shield"
   | "house"
@@ -7,6 +8,7 @@ export type ProjectIcon =
 
 export const projectSlugs = [
   "einkaklubburinn-arion-banki",
+  "verkapp",
   "dr-cinema",
   "cryptocop",
   "fasteignavefur",

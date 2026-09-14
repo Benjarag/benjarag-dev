@@ -45,7 +45,7 @@ export const en = {
     },
   },
   projects: {
-    eyebrow: "Finished work",
+    eyebrow: "Selected work",
     title: "Featured Projects",
     viewProject: "View project details",
     back: "Back to projects",
@@ -69,6 +69,17 @@ export const en = {
           "The backend used ASP.NET Core REST APIs, Entity Framework Core and SQL Server with a clear separation between endpoints, business logic and data access. RabbitMQ and NServiceBus handled transaction events asynchronously, including duplicate protection, retries, error queues and outbound events for future refund and notification services. The prototype processed more than 100 transactions per minute in testing.",
           "The team used Docker Compose, Azure DevOps Pipelines and Octopus Deploy to coordinate development, testing and deployment. I took primary responsibility for project reporting and internal communication, maintained oversight of its scope and status, and compiled work and progress data for the team. I also focused on keeping collaboration efficient and information flow clear while working from Brisbane across a significant time-zone difference.",
           "Project report: https://hdl.handle.net/1946/53852",
+        ],
+      },
+      verkapp: {
+        title: "VerkApp",
+        category: "Mobile application · In development",
+        summary:
+          "A field-service app in development for Landslagnir ehf., coordinating jobs, employees and work in the field.",
+        details: [
+          "I am currently developing VerkApp for Landslagnir ehf., an Icelandic plumbing company with around 30 employees. The app is intended to give managers one place to create location-based jobs, assign them directly or offer them to available employees.",
+          "Planned employee workflows include accepting jobs, viewing job details, navigating to the site, updating work status, adding photos and notes, and marking work complete. The management view is being designed to provide an overview of jobs, employees, availability and ongoing work.",
+          "The architecture uses Expo, React Native, TypeScript, Supabase and PostgreSQL and is being designed for reuse by other field-service businesses, including electrical, HVAC, carpentry and maintenance companies.",
         ],
       },
       "dr-cinema": {

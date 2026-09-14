@@ -27,6 +27,18 @@ export const projects = [
     featured: true,
   },
   {
+    slug: "verkapp",
+    year: 2026,
+    technologies: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+    ],
+    icon: "wrench",
+  },
+  {
     slug: "dr-cinema",
     year: 2025,
     technologies: [

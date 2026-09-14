@@ -45,7 +45,7 @@ export const is = {
     },
   },
   projects: {
-    eyebrow: "Lokin verkefni",
+    eyebrow: "Verkasafn",
     title: "Valin verkefni",
     viewProject: "Skoða verkefni nánar",
     back: "Til baka í verkefni",
@@ -69,6 +69,17 @@ export const is = {
           "Bakendinn var byggður með ASP.NET Core REST API, Entity Framework Core og SQL Server og skýrum aðskilnaði endapunkta, viðskiptareglna og gagnalags. RabbitMQ og NServiceBus sáu um ósamstillta færsluvinnslu með vörn gegn tvívinnslu, endurtilraunum, villuröðum og niðurstöðuskeytum fyrir framtíðar endurgreiðslu- og tilkynningaþjónustur. Frumgerðin vann úr yfir 100 færslum á mínútu í prófunum.",
           "Teymið nýtti Docker Compose, Azure DevOps Pipelines og Octopus Deploy til að samræma þróun, prófanir og dreifingu. Ég bar meginábyrgð á skýrslugerð og upplýsingamiðlun innan verkefnisins, hélt utan um umfang og stöðu þess og tók saman vinnu- og framvindugögn fyrir teymið. Ég lagði jafnframt áherslu á að halda samstarfinu skilvirku og upplýsingaflæði skýru þrátt fyrir að vinna frá Brisbane og takast á við verulegan tímamun.",
           "Lokaskýrsla verkefnisins: https://hdl.handle.net/1946/53852",
+        ],
+      },
+      verkapp: {
+        title: "VerkApp",
+        category: "Smáforrit · Í þróun",
+        summary:
+          "Vettvangs- og verkstjórnunarforrit í þróun fyrir Landslagnir ehf. sem tengir saman verk, starfsfólk og vinnu á vettvangi.",
+        details: [
+          "Ég er að þróa VerkApp fyrir Landslagnir ehf., íslenskt pípulagningafyrirtæki með um 30 starfsmenn. Markmiðið er að stjórnendur geti stofnað verk á tilteknum stöðum, úthlutað þeim beint eða sent beiðni til lausra starfsmanna.",
+          "Fyrirhugað verkflæði starfsmanna nær yfir að taka við verkum, skoða upplýsingar, fá leiðsögn á verkstað, uppfæra verkstöðu, bæta við myndum og athugasemdum og ljúka verki. Stjórnendahlutinn er hannaður til að veita yfirsýn yfir verk, starfsfólk, tiltækileika og yfirstandandi vinnu.",
+          "Uppbyggingin nýtir Expo, React Native, TypeScript, Supabase og PostgreSQL og er hönnuð með endurnýtingu í huga fyrir önnur þjónustufyrirtæki, svo sem rafvirkja-, loftræsti-, smíða- og viðhaldsfyrirtæki.",
         ],
       },
       "dr-cinema": {

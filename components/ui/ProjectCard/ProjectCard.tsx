@@ -5,6 +5,7 @@ import {
   House,
   Landmark,
   ShieldCheck,
+  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -21,6 +22,7 @@ type ProjectCardProps = {
 
 const icons = {
   landmark: Landmark,
+  wrench: Wrench,
   cinema: Clapperboard,
   shield: ShieldCheck,
   house: House,
@@ -29,6 +31,7 @@ const icons = {
 
 const iconStyles = {
   landmark: "",
+  wrench: "",
   cinema: "",
   shield: styles.iconGreen,
   house: styles.iconGreen,
